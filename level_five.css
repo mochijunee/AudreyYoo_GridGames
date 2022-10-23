@@ -1,0 +1,40 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+
+#title {
+  grid-column-start:1;
+  grid-column-end: -1;
+  /* This should span the entire page, look into using negative numbers in grid-column-end */
+}
+
+.friend {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+/* Style other types of family members below:
+Siblings: Span 2 columns, but one row
+Aunts and Uncles: Span 1 column, but two rows
+Grandparents: Span 2 columns and two rows
+Cousins and friends: One row, and one column */
+.siblings {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.aunts-uncles {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.grandparents {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.cousins-friends {
+  grid-column: span 1;
+  grid-row: span 1;
+}
